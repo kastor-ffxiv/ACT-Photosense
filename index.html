@@ -55,13 +55,12 @@
         function handler(e) {
             if(Array.isArray(e.line)) {
                 e.line.forEach((line) => {
-                    //if(line.includes('Added new combatant Beastly Sculpture.')) {
-                    if(line.includes('Energy Drain.')) { // Testing out of instance
+                    if(line.includes('Added new combatant Beastly Sculpture.')) {
                         // make cover element black transparent
                         document.getElementById('cover').classList.add('cover-dark');
                         setTimeout(() => { 
                             document.getElementById('cover').classList.remove('cover-dark');
-                        }, 30000);
+                        }, 30000); // Hide the overlay after 30 seconds
                     }
                 })
             }
