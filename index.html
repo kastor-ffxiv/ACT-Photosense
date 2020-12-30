@@ -55,8 +55,8 @@
         function handler(e) {
             if(Array.isArray(e.line)) {
                 e.line.forEach((line) => {
-                    //if(line.includes('Added new combatant Beastly Sculpture.')) {
-                    if(line.includes('Energy Drain')) {
+                    if(line.includes('Added new combatant Beastly Sculpture.')) {
+                    //if(line.includes('Energy Drain')) { // for debugging
                         // make cover element black transparent
                         document.getElementById('cover').classList.add('cover-dark');
                         setTimeout(() => { 
