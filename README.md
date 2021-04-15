@@ -11,6 +11,8 @@ Use your best judgement and don't get hurt for a video game.
 
 Please follow this video until I create more detailed instructions: https://www.youtube.com/watch?v=rGhH0zTZG_M
 
+The overlay URL is `https://kastor-ffxiv.github.io/ACT-Photosense/`
+
 ## List Of Effects By Encounter
 
 This plugin currently works for the following mechanics, listed by encounter.
