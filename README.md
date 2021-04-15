@@ -9,7 +9,7 @@ Use your best judgement and don't get hurt for a video game.
 
 ## Setup/Installation
 
-Please follow this video for now: https://www.youtube.com/watch?v=rGhH0zTZG_M
+Please follow this video until I create more detailed instructions: https://www.youtube.com/watch?v=rGhH0zTZG_M
 
 ## List Of Effects By Encounter
 
