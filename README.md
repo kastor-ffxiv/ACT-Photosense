@@ -17,6 +17,16 @@ The overlay URL is `https://kastor-ffxiv.github.io/ACT-Photosense/`
 
 This plugin currently works for the following mechanics, listed by encounter.
 
+### The Tower At Paradigm's Breach (Nier Alliance Raid #3)
+
+#### Red Girl
+- Cruelty - Darkens screen by 70% for 9 seconds.
+- Sublime Transcendence (AKA the Jumpscare) - Completely obscures screen for 10 seconds.
+
+#### False Idol/Her Inflorescence
+- Transition effect - Darkens screen by 70% for 12 seconds.
+- Distortion - Darkens screen by 70% for 9 seconds.
+
 ### E12S
 
-Lion Breath Cones - Lasts for 30 seconds after the Lion Sculptures spawn.
+- Lion Breath Cones - Darkens screen by 70% for 30 seconds after the Lion Sculptures spawn.
