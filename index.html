@@ -23,8 +23,12 @@
             background-color: rgba(0,0,0,0.7);
         }
 
+        .cover-full {
+            background-color: rgb(0,0,0);
+            opacity: 0.1;
+        }
+
         .resizeHandle {
-            background-image: url(handle.png);
             background-position: bottom right;
             background-repeat: no-repeat;
             box-sizing: border-box;
@@ -32,6 +36,8 @@
 
     </style>
     <script src="https://ngld.github.io/OverlayPlugin/assets/shared/common.min.js"></script>
+    <script src="zone_handlers.js"></script>
+    <script src="photosense.js"></script>
     <script>
         document.addEventListener("onOverlayStateUpdate", function (e) {
             if (!e.detail.isLocked) {
@@ -41,6 +47,11 @@
             }
         });
 
+        // Globals
+        let zoneID = 0;
+        let loadedEventListeners = [];
+        let darkener = false;
+
         function displayResizeHandle() {
             document.documentElement.classList.add("resizeHandle");
         }
@@ -49,25 +60,10 @@
             document.documentElement.classList.remove("resizeHandle");
         }
 
-        addOverlayListener("LogLine", (e) => handler(e));
+        addOverlayListener("ChangeZone", (e) => zoneListener(e));
+        addOverlayListener("LogLine", (e) => log_handler(e));
+
         startOverlayEvents();
-
-        function handler(e) {
-            if(Array.isArray(e.line)) {
-                e.line.forEach((line) => {
-                    if(line.includes('Added new combatant Beastly Sculpture.')) {
-                    //if(line.includes('Energy Drain')) { // for debugging
-                        // make cover element black transparent
-                        document.getElementById('cover').classList.add('cover-dark');
-                        setTimeout(() => { 
-                            document.getElementById('cover').classList.remove('cover-dark');
-                        }, 30000); // Hide the overlay after 30 seconds
-                    }
-                })
-            }
-        }
-
-
     </script>
 </head>
 <body>
