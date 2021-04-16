@@ -4,6 +4,13 @@ let zoneHandlers = {
     //641: debug_handler
 };
 
+let spellTable = {
+    RedGirl_Cruelty: "6013",
+    RedGirl_SublimeTranscendence: "620A",
+    HerInflorescence_Distortion: "5BE9",
+    FalseIdol_Eminence: "5DD5"
+}
+
 function debug_handler(e) {
     // Loads in Shirogane only
         if(Array.isArray(e.line) && e.line[0] == "00") {
@@ -33,22 +40,20 @@ function e12S_handler(e) {
 
 function nier3_handler(e) {
 	if(Array.isArray(e.line)) {
-    	if(e.line[0] == "20" && e.line[3] == "Red Girl" && e.line[5] == "Cruelty") {
+    	if(e.line[0] == "20" && e.line[4] == spellTable.RedGirl_Cruelty) {
     		effect_fadeOutIn(9, 0.7);
     	}
 
-        if(e.line[0] == "20" && e.line[3] == "Red Girl" && e.line[5] == "Sublime Transcendence") {
+        if(e.line[0] == "20" && e.line[4] == spellTable.RedGirl_SublimeTranscendence) {
             effect_fadeOutIn(10, 1);
         }
 
-        if(e.line[0] == "20" && e.line[3] == "Her Inflorescence" && e.line[5] == "Distortion") {
+        if(e.line[0] == "20" && e.line[4] == spellTable.HerInflorescence_Distortion) {
             effect_fadeOutIn(9, 0.7);
-            console.log(e.line);
         }
 
-        if(e.line[0] == "00" && e.line[4].includes("Down for the Count") && e.line[4].includes("You suffer the effect of")) {
+        if(e.line[0] == "20" && e.line[4] == spellTable.FalseIdol_Eminence) {
             effect_fadeOutIn(12, 0.7);
-            console.log(e.line);
         }
     }
 }
