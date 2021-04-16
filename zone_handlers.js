@@ -1,7 +1,7 @@
 let zoneHandlers = {
     909: e12S_handler,
     966: nier3_handler,
-    641: debug_handler
+    //641: debug_handler
 };
 
 function debug_handler(e) {
